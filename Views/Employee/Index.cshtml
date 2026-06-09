@@ -20,12 +20,18 @@
             </div>
 
             <div class="col-md-2">
-                <label class="form-label">Department ID</label>
+                <label class="form-label">
+                    Department ID
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#deptModal" class="text-decoration-none ms-1" title="View Department IDs">ℹ️</a>
+                </label>
                 <input type="number" name="departmentId" class="form-control" value="@ViewBag.CurrentDepartmentId" />
             </div>
 
             <div class="col-md-2">
-                <label class="form-label">Shift ID</label>
+                <label class="form-label">
+                    Shift ID
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#shiftModal" class="text-decoration-none ms-1" title="View Shift IDs">ℹ️</a>
+                </label>
                 <input type="number" name="shiftId" class="form-control" value="@ViewBag.CurrentShiftId" />
             </div>
 
@@ -76,4 +82,59 @@
             }
         </tbody>
     </table>
+</div>
+
+<div class="modal fade" id="deptModal" tabindex="-1" aria-labelledby="deptModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deptModalLabel">Department ID Index</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-sm table-striped">
+                    <thead><tr><th>ID</th><th>Department Name</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Document Control</td></tr>
+                        <tr><td>2</td><td>Engineering</td></tr>
+                        <tr><td>3</td><td>Executive</td></tr>
+                        <tr><td>4</td><td>Facilities and Maintenance</td></tr>
+                        <tr><td>5</td><td>Finance</td></tr>
+                        <tr><td>6</td><td>Human Resources</td></tr>
+                        <tr><td>7</td><td>Information Services</td></tr>
+                        <tr><td>8</td><td>Marketing</td></tr>
+                        <tr><td>9</td><td>Production</td></tr>
+                        <tr><td>10</td><td>Production Control</td></tr>
+                        <tr><td>11</td><td>Purchasing</td></tr>
+                        <tr><td>12</td><td>Quality Assurance</td></tr>
+                        <tr><td>13</td><td>Research and Development</td></tr>
+                        <tr><td>14</td><td>Sales</td></tr>
+                        <tr><td>15</td><td>Shipping and Receiving</td></tr>
+                        <tr><td>16</td><td>Tool Design</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="shiftModal" tabindex="-1" aria-labelledby="shiftModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="shiftModalLabel">Shift ID Index</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-sm table-striped">
+                    <thead><tr><th>ID</th><th>Shift Type</th></tr></thead>
+                    <tbody>
+                        <tr><td>1</td><td>Day</td></tr>
+                        <tr><td>2</td><td>Evening</td></tr>
+                        <tr><td>3</td><td>Night</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
